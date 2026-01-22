@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+ *{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+body{
+  height: 100vh;
+  background: radial-gradient(circle at top, #1a1a1a, #050505);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Glass card */
+.download-card{
+  width: 320px;
+  padding: 24px 26px;
+  background: rgba(40, 40, 40, 0.85);
+  border-radius: 14px;
+  box-shadow: 
+    0 20px 40px rgba(0,0,0,0.6),
+    inset 0 1px 0 rgba(255,255,255,0.05);
+  backdrop-filter: blur(12px);
+  text-align: center;
+}
+
+/* Title */
+.title{
+  color: #e5e5e5;
+  font-size: 16px;
+  margin-bottom: 16px;
+  display: initial;
+}
+
+/* Progress bar background */
+.progress-track{
+  width: 100%;
+  height: 10px;
+  background: #3a3a3a;
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+/* Progress fill */
+.progress-bar{
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, #ffffff, #dcdcdc);
+  border-radius: 999px;
+  transition: width 0.4s ease;
+}
+
+/* Percentage */
+.percent{
+  margin-top: 12px;
+  font-size: 14px;
+  color: #cfcfcf;
+  letter-spacing: 0.4px;
+}
+    </style>
+</head>
+<body>
+     <div class="download-card">
+    <p class="title">Downloading...</p>
+
+    <div class="progress-track">
+      <div class="progress-bar"></div>
+    </div>
+
+    <p class="percent">0%</p>
+  </div>
+    <script src="script.js"></script>
+</body>
+</html>
